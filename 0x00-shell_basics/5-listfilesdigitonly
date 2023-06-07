@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -l --all | sed -r 's/(uid=[0-9]+) (gid=[0-9]+)/\1 \2/g'
