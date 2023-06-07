@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name '*.html' | rsync -u --exclude='*.html' ../
+rsync -u --exclude '*.html' . .. | rsync -u --include '*.html' --exclude '*' . ..
