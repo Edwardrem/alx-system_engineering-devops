@@ -1,6 +1,2 @@
 #!/bin/bash
-for file in *.html; do
-  if [[ ! -f "$file" && ! -f "${file%.html}" ]]; then
-    cp "$file" ../
-  fi
-done
+rsync -u --exclude '*.html' . .. 
