@@ -1,2 +1,2 @@
 #!/bin/bash
-rsync -u --include '*.html' --exclude '*' . .. 
+find . -name "*.html" -exec sh -c 'test ! -f "$1" -o "$1" -nt "$2" && cp "$1" "$2"' _ {} + 
