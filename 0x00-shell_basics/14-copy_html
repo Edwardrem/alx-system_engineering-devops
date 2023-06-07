@@ -1,2 +1,12 @@
 #!/bin/bash
-rsync -u --exclude '*.html' . .. && rsync -u --include '*.html' --exclude '*' . ..
+# Get the current working directory
+cwd=$(pwd)
+# Get the parent directory of the current working directory
+parent_cwd=$(dirname "$cwd")
+# Loop through all files in the current working directory
+for file in $(ls "$cwd"); do
+    # Check if the file is an HTML file
+    if [[ $file == *.html ]]; then
+        # Construct the source and destination file paths
+        src_file=$cwd/$file
+        dest.
