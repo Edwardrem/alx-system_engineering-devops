@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name "*.html" -exec sh -c 'test ! -f "$1" -o "$1" -nt "$2" && cp "$1" "$2"' _ {} + 
+find . -type f -name '*.html' ! -path ../.* | rsync -u ../
