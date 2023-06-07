@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(file -ib /tmp/iamafile)
+echo $(file -ib -p /tmp/iamafile)
