@@ -1,9 +1,16 @@
 #!/bin/bash
 
-file -C -m school.mgc "0 string SCHOOL School data"
+# Create the magic file
+echo "0 string SCHOOL School data" > school.mgc
+
+# Compile the magic file
+file -C -m school.mgc
+
+# Check if all the files in the current directory are School data files
 for file in *; do
 	  file_type=$(file -m school.mgc "$file")
 	    if [[ "$file_type" == "School data" ]]; then
 		        echo "$file is a School data file"
 			  fi
 		  done
+
