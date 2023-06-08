@@ -1,2 +1,2 @@
 #!/bin/bash
-groups | tr '\n' ' ' | sed 's/ //g'
+groups | tr '\n' ' ' | sed 's/ //g' | cut -d ' ' -f 1
