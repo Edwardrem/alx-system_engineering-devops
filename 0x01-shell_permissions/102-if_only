@@ -1,2 +1,2 @@
 #!/bin/bash
-chown "$(stat -c "%U" hello | grep -q guillaume && echo betty || echo guillaume)" hello
+chown "$(stat -c "%U" hello | grep guillaume | cut -d: -f1)" hello
