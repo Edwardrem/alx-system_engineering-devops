@@ -1,2 +1,2 @@
 #!/bin/bash
-printf '%s, ' . ..; ls -1p --group-directories-first | tr '\n' ',' | sed 's/,$/\n/'
+echo *,*/ | sort -f | sed 's/$/,/'
