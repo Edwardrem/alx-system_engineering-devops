@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(ls -1 | sort -f | egrep -v "^\.\." | sed 's/\n/, /g' | tr -d ' ' | sed 's//\n/' | tr '/' '\n' | sed 's/,$//')"
+echo "$(ls -1 | sort -f | egrep -v "^\.\." | sed 's/\n/, /g' | sed 's//\n/' | tr '/' '\n' | sed 's/,$//' | sed '1i./, ../')"
