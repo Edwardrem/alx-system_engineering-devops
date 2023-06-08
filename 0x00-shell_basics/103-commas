@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1A | grep -vE "^\.$|^\.\.$" | sort -b -t . -k 2,2 | cut -b3- | sed 's/^/./'
+ls -1 | sed -n '1s/^\.//p;/^$/d;s/\..*//;s/\//,/g;s/$/\n/p'
