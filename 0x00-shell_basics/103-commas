@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -o -type d | sed 's/^\.//;s/\..*//;s/\//,/g;1s/$/,.,../;s/$/\n/'
+ls -1p --group-directories-first | tr '\n' ',' | sed 's/,$/\n/'
