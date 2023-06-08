@@ -1,4 +1,9 @@
 #!/bin/bash
 
 file -C -m school.mgc "0 string SCHOOL School data"
-file -m school.mgc *
+for file in *; do
+	  file_type=$(file -m school.mgc "$file")
+	    if [[ "$file_type" == "School data" ]]; then
+		        echo "$file is a School data file"
+			  fi
+		  done
