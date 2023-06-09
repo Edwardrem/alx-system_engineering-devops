@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1p | sort -f | sed 's/$/,/' | tr -d '\n' | sed 's/,$/\n/'
+printf './, ../, ' && ls -1p | grep -v -e '/$' | sort -f | sed 's/$/,/' | tr -d '\n' && ls -1pd .*/ | sort -f | sed 's/$/,/' | tr -d '\n' && printf '\b \n'
