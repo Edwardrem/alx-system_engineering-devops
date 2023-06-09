@@ -1,2 +1,2 @@
 #!/bin/bash
-printf './, ../, ' && ls -1p | grep -v -e '/$' | sort -f | sed 's/$/,/' | tr -d '\n' && ls -1pd .*/ | sort -f | sed 's/$/,/' | tr -d '\n' && printf '\b \n'
+echo "./, ../, $(ls -a | sed 's/^\.//' | grep -v / | cut -d'/' -f1 | sort | tr '\n' ',')"
