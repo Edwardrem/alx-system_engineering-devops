@@ -1,2 +1,2 @@
 #!/bin/bash
-tr 'A-Za-z' 'N-ZA-Mn-za-m'
+while read -r line; do echo "$line" | tr 'A-Za-z' 'N-ZA-Mn-za-m'; done
